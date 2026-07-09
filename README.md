@@ -6,15 +6,15 @@ Two versions are included:
  
 | Script | User ID | Best for |
 |---|---|---|
-| `Activate-Pim.ps1` | Looked up automatically (`az ad signed-in-user show`) | Most people — works for anyone who runs it |
-| `Activate-Pim-Hardcoded.ps1` | Pasted in manually | Personal use, or when the Graph lookup fails (e.g. restricted Graph permissions) |
+| `dynamicUserID.ps1` | Looked up automatically (`az ad signed-in-user show`) | Most people — works for anyone who runs it |
+| `hardcodedUserID.ps1` | Pasted in manually | Personal use, or when the Graph lookup fails (e.g. restricted Graph permissions) |
  
 ## Prerequisites
  
 - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed
 - An **eligible** PIM assignment for Contributor on the target subscription (these scripts activate existing eligibility — they can't grant you access you don't have)
 - PowerShell (works on Windows PowerShell 5.1 and PowerShell 7+)
-## Usage — dynamic version (`Activate-Pim.ps1`)
+## Usage — dynamic version (`dynamicUserID.ps1`)
  
 1. Log in to Azure CLI:
 ```powershell
@@ -29,10 +29,10 @@ Two versions are included:
  
 3. Run it (or paste the whole thing into a PowerShell window):
 ```powershell
-   .\Activate-Pim.ps1
+   .\dynamicUserID.ps1
 ```
  
-## Usage — hardcoded version (`Activate-Pim-Hardcoded.ps1`)
+## Usage — hardcoded version (`hardcodedUserID.ps1`)
  
 Same as above, but also set your own user object ID:
  
